@@ -1,0 +1,20 @@
+﻿@model UserManagementApp.Models.User
+
+<h2>Удалить пользователя</h2>
+
+<div>
+    <h4>Вы уверены, что хотите удалить этого пользователя?</h4>
+    <p>
+        <strong>Имя:</strong> @Model.Name
+    </p>
+    <p>
+        <strong>Email:</strong> @Model.Email
+    </p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Удалить</button>
+</form>
+<br \ />
+<a asp-action="Index" class="btn btn-secondary">Назад</a>
